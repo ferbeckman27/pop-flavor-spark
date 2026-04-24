@@ -1,26 +1,72 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { Header } from "@/components/Header";
+import { ProductCard } from "@/components/ProductCard";
+import { fetchProducts, type ShopifyProduct } from "@/lib/shopify";
+import { Loader2 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Fizz Flavor Hub — Refrigerantes saborizados artesanais" },
+      {
+        name: "description",
+        content:
+          "Refrigerantes saborizados Fizz Flavor Hub: abacate, laranja, morango e mais. Sabor único, ingredientes naturais.",
+      },
+      { property: "og:title", content: "Fizz Flavor Hub — Refrigerantes saborizados" },
+      {
+        property: "og:description",
+        content: "Descubra nossa linha de refrigerantes saborizados artesanais.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
+  const [products, setProducts] = useState<ShopifyProduct[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchProducts(20)
+      .then(setProducts)
+      .catch((err) => console.error("Failed to fetch products:", err))
+      .finally(() => setLoading(false));
+  }, []);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <section className="border-b border-border/40 bg-gradient-to-b from-secondary/40 to-background">
+          <div className="container mx-auto px-4 py-16 text-center md:py-24">
+            <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
+              Refrigerantes saborizados
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+              Sabores únicos, ingredientes naturais. Descubra a linha Fizz Flavor Hub.
+            </p>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-12">
+          <h2 className="mb-8 text-2xl font-bold tracking-tight">Nossos sabores</h2>
+          {loading ? (
+            <div className="flex justify-center py-16">
+              <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+            </div>
+          ) : products.length === 0 ? (
+            <div className="py-16 text-center text-muted-foreground">No products found</div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {products.map((product) => (
+                <ProductCard key={product.node.id} product={product} />
+              ))}
+            </div>
+          )}
+        </section>
+      </main>
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
