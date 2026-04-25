@@ -2,6 +2,7 @@ import { createFileRoute, Link, useRouter } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { fetchProductByHandle, type ShopifyProductNode } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { ArrowLeft, Loader2, Minus, Plus, ShoppingCart } from "lucide-react";
@@ -205,6 +206,7 @@ function ProductPage() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
