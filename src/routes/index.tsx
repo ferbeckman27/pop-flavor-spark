@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { FlavorHero } from "@/components/FlavorHero";
+import { Footer } from "@/components/Footer";
 import { fetchProducts, type ShopifyProduct } from "@/lib/shopify";
 import { Loader2 } from "lucide-react";
 
@@ -60,6 +61,7 @@ function Index() {
           )}
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
