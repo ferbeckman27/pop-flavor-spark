@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
+import { FlavorHero } from "@/components/FlavorHero";
 import { fetchProducts, type ShopifyProduct } from "@/lib/shopify";
 import { Loader2 } from "lucide-react";
 
@@ -39,16 +40,8 @@ function Index() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="border-b border-border/40 bg-gradient-to-b from-secondary/40 to-background">
-          <div className="container mx-auto px-4 py-16 text-center md:py-24">
-            <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-              Refrigerantes saborizados
-            </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              Sabores únicos, ingredientes naturais. Descubra a linha Fizz Flavor Hub.
-            </p>
-          </div>
-        </section>
+        <h1 className="sr-only">Fizz Flavor Hub — Refrigerantes saborizados</h1>
+        <FlavorHero />
 
         <section className="container mx-auto px-4 py-12">
           <h2 className="mb-8 text-2xl font-bold tracking-tight">Nossos sabores</h2>
