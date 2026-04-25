@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Leaf, Sparkles, HeartHandshake } from "lucide-react";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -27,53 +26,35 @@ function SobrePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-4 py-16">
         <section className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
-            Sabor que faz diferença
+          <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+            Nossa marca
+          </span>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+            Fizz Flavor Hub
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            A Fizz Flavor Hub nasceu da paixão por sabores brasileiros. Criamos
-            refrigerantes artesanais com frutas reais, sem corantes artificiais
-            e com muito carinho em cada lata.
+          <p className="mt-6 text-lg text-muted-foreground">
+            A Fizz Flavor Hub nasceu para reinventar o refrigerante brasileiro.
+            Trabalhamos com frutas reais e receitas autênticas para entregar
+            sabores que celebram o Brasil em cada gole.
           </p>
         </section>
 
-        <section className="mt-12 grid gap-6 md:grid-cols-3">
-          <div className="rounded-lg border bg-card p-6">
-            <Leaf className="h-8 w-8 text-primary" />
-            <h2 className="mt-4 text-lg font-semibold">Ingredientes naturais</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Trabalhamos com produtores locais para garantir frutas frescas em
-              todas as receitas.
-            </p>
-          </div>
-          <div className="rounded-lg border bg-card p-6">
-            <Sparkles className="h-8 w-8 text-primary" />
-            <h2 className="mt-4 text-lg font-semibold">Receitas exclusivas</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Sabores como abacate, maracujá e uva desenvolvidos para destacar o
-              melhor de cada fruta.
-            </p>
-          </div>
-          <div className="rounded-lg border bg-card p-6">
-            <HeartHandshake className="h-8 w-8 text-primary" />
-            <h2 className="mt-4 text-lg font-semibold">Compromisso com você</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Qualidade, transparência e atendimento próximo em cada etapa da
-              jornada.
-            </p>
-          </div>
-        </section>
-
-        <section className="mx-auto mt-16 max-w-3xl rounded-2xl bg-secondary/40 p-8 text-center">
-          <h2 className="text-2xl font-bold">Nossa missão</h2>
-          <p className="mt-3 text-muted-foreground">
-            Reinventar o refrigerante brasileiro, levando sabores autênticos
-            para mesas do Brasil inteiro com responsabilidade ambiental e
-            social.
+        <section className="mx-auto mt-12 max-w-3xl rounded-2xl bg-secondary/40 p-8 md:p-10">
+          <h2 className="text-2xl font-bold">Nosso propósito</h2>
+          <p className="mt-4 text-muted-foreground">
+            Acreditamos que uma bebida pode ser uma experiência. Por isso,
+            criamos refrigerantes saborizados com personalidade — feitos para
+            quem busca algo diferente, natural e cheio de identidade.
+            Nosso propósito é oferecer momentos de prazer com qualidade,
+            transparência e respeito por quem consome.
           </p>
-          <Button asChild className="mt-6">
+          <p className="mt-4 text-muted-foreground">
+            Cada lata Fizz é um convite a redescobrir o sabor das frutas
+            brasileiras de um jeito único: refrescante, marcante e inesquecível.
+          </p>
+          <Button asChild className="mt-8">
             <Link to="/">Conheça nossos sabores</Link>
           </Button>
         </section>
