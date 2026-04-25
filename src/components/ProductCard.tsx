@@ -2,10 +2,20 @@ import { Link } from "@tanstack/react-router";
 import { Card } from "@/components/ui/card";
 import type { ShopifyProduct } from "@/lib/shopify";
 
+const brlFormatter = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+});
+
 export function ProductCard({ product }: { product: ShopifyProduct }) {
   const node = product.node;
   const image = node.images.edges[0]?.node;
   const price = node.priceRange.minVariantPrice;
+  const amount = parseFloat(price.amount);
+  const display =
+    price.currencyCode === "BRL"
+      ? brlFormatter.format(amount)
+      : `${price.currencyCode} ${amount.toFixed(2)}`;
 
   return (
     <Link
@@ -26,9 +36,7 @@ export function ProductCard({ product }: { product: ShopifyProduct }) {
         </div>
         <div className="p-4 space-y-1">
           <h3 className="font-semibold leading-tight">{node.title}</h3>
-          <p className="text-lg font-bold text-primary">
-            {price.currencyCode} {parseFloat(price.amount).toFixed(2)}
-          </p>
+          <p className="text-lg font-bold text-primary">{display}</p>
         </div>
       </Card>
     </Link>
