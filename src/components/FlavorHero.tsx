@@ -22,12 +22,12 @@ interface Flavor {
 }
 
 const FLAVORS: Flavor[] = [
-  { name: "Morango", word: "STRAWBERRY", bg: "#e63946", textColor: "#ffffff", can: morangoCan, fruit: morangoFruit },
-  { name: "Laranja", word: "ORANGE", bg: "#ff7a1a", textColor: "#ffffff", can: laranjaCan, fruit: laranjaFruit },
-  { name: "Limão", word: "LIME", bg: "#3fa34d", textColor: "#ffffff", can: limaoCan, fruit: limaoFruit },
-  { name: "Maracujá", word: "PASSION", bg: "#f4a300", textColor: "#ffffff", can: maracujaCan, fruit: maracujaFruit },
-  { name: "Uva", word: "GRAPE", bg: "#5b2a86", textColor: "#ffffff", can: uvaCan, fruit: uvaFruit },
-  { name: "Abacate", word: "AVOCADO", bg: "#4a7c2a", textColor: "#ffffff", can: abacateCan, fruit: abacateFruit },
+  { name: "Morango", word: "MORANGO", bg: "#e63946", textColor: "#ffffff", can: morangoCan, fruit: morangoFruit },
+  { name: "Laranja", word: "LARANJA", bg: "#ff7a1a", textColor: "#ffffff", can: laranjaCan, fruit: laranjaFruit },
+  { name: "Limão", word: "LIMÃO", bg: "#3fa34d", textColor: "#ffffff", can: limaoCan, fruit: limaoFruit },
+  { name: "Maracujá", word: "MARACUJÁ", bg: "#f4a300", textColor: "#ffffff", can: maracujaCan, fruit: maracujaFruit },
+  { name: "Uva", word: "UVA", bg: "#5b2a86", textColor: "#ffffff", can: uvaCan, fruit: uvaFruit },
+  { name: "Abacate", word: "ABACATE", bg: "#4a7c2a", textColor: "#ffffff", can: abacateCan, fruit: abacateFruit },
 ];
 
 export function FlavorHero() {
