@@ -5,7 +5,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { FlavorHero } from "@/components/FlavorHero";
 import { Footer } from "@/components/Footer";
 import { fetchProducts, type ShopifyProduct } from "@/lib/shopify";
-import { Loader2, MessageSquare, Handshake, ArrowUpRight } from "lucide-react";
+import { Loader2, MessageSquare, Handshake, ArrowUpRight, Leaf, Sparkles, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -45,7 +45,57 @@ function Index() {
         <h1 className="sr-only">Fizz Flavor Hub — Refrigerantes saborizados</h1>
         <FlavorHero />
 
-        <section id="sabores" className="container mx-auto px-4 py-16">
+        <section id="sobre" className="container mx-auto px-4 py-16">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+              Sobre a Fizz
+            </span>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+              Sabor brasileiro, do jeito que só a Fizz faz
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              A Fizz Flavor Hub nasceu da vontade de reinventar o refrigerante
+              brasileiro. Trabalhamos com frutas reais, receitas autênticas e
+              uma curadoria de sabores que celebra o nosso país em cada gole —
+              do clássico limão ao inesperado abacate.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border bg-card p-6">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Sparkles className="h-6 w-6" />
+              </div>
+              <h3 className="mt-4 font-semibold">Nosso propósito</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Transformar o consumo de refrigerante em uma experiência
+                refrescante, divertida e cheia de identidade brasileira.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-card p-6">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Leaf className="h-6 w-6" />
+              </div>
+              <h3 className="mt-4 font-semibold">Diferencial</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Ingredientes naturais, frutas reais e combinações ousadas como
+                abacate e maracujá. Sem mistério: só sabor de verdade.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-card p-6">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <HeartHandshake className="h-6 w-6" />
+              </div>
+              <h3 className="mt-4 font-semibold">Compromisso</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Transparência com quem consome e parceria com quem distribui —
+                qualidade do começo ao fim, em cada lata.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="sabores" className="container mx-auto px-4 pb-16">
           <div className="mb-10 text-center">
             <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
               Catálogo
