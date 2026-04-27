@@ -31,14 +31,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Fizz Flavor" },
+      { name: "description", content: "Sabor brasileiro, do jeito que só a fizz faz" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Fizz Flavor" },
+      { property: "og:description", content: "Sabor brasileiro, do jeito que só a fizz faz" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Fizz Flavor" },
+      { name: "twitter:description", content: "Sabor brasileiro, do jeito que só a fizz faz" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c143b532-2098-4c5c-96df-ec49cd7b6888/id-preview-7ba3a2af--82a7da27-714a-45e0-a019-e7eaf6621fcf.lovable.app-1777299951898.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c143b532-2098-4c5c-96df-ec49cd7b6888/id-preview-7ba3a2af--82a7da27-714a-45e0-a019-e7eaf6621fcf.lovable.app-1777299951898.png" },
     ],
     links: [
       {
