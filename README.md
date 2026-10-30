@@ -1,26 +1,58 @@
-# Fizz & Flavor Hub
+# Fizz & Flavor Hub — Pop Flavor Spark 🥤✨
 
-crie um site com aplicação animada para refrigerantes saborizados com home, sobre os refrigerantes e marca, precos, carrinho e outras informações como endereço, fale conosco, seja parceiro.  faça tambem outros sabores seguindo esses modelos de produtos.
+**Fizz & Flavor Hub** é uma plataforma de e-commerce vibrante, responsiva e cheia de animações criada para destacar uma linha exclusiva de refrigerantes artesanais saborizados.
 
-This project was built with [Lovable](https://lovable.dev).
+🚀 **Live Demo:** [pop-flavor-spark.lovable.app](https://pop-flavor-spark.lovable.app)
 
-**Live app**: https://pop-flavor-spark.lovable.app
+---
 
-## Build with Lovable
+## 📌 Sobre o Projeto
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/82a7da27-714a-45e0-a019-e7eaf6621fcf).
+O projeto foi desenvolvido para oferecer uma jornada de compra divertida e intuitiva, combinando uma identidade visual marcante com recursos completos de um e-commerce de bebidas.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+### Key Features
+* 🍹 **Catálogo de Sabores:** Exibição interativa de refrigerantes artesanais com fotos, descrições e detalhes dos ingredientes.
+* 🛒 **Carrinho de Compras:** Fluxo completo para adição, alteração de quantidade e gerenciamento de itens.
+* 🏷️ **Tabela de Preços & Ofertas:** Apresentação clara dos valores e opções de kits/combos.
+* 🤝 **Seção Seja Parceiro & Fale Conosco:** Canais diretos para contato B2B e atendimento ao cliente.
+* 📍 **Informações de Localização:** Seção dedicada com endereço e informações de contato da marca.
+* 🎨 **Interface Animada:** Layout moderno com transições e animações fluidas para engajamento do usuário.
 
-## Development
+---
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## 🛠️ Tecnologias Utilizadas
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+* **Front-end:** [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+* **Backend & Banco de Dados:** [Supabase](https://supabase.com/)
+* **Plataforma de Desenvolvimento:** [Lovable](https://lovable.app)
+
+---
+
+## 🚀 Como Executar o Projeto Localmente
+
+### Pré-requisitos
+Certifique-se de ter o **Node.js** (versão 18+) e o **npm** ou **bun** instalados em sua máquina.
+
+### Passo a Passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/ferbeckman27/pop-flavor-spark.git](https://github.com/ferbeckman27/pop-flavor-spark.git)
+Acesse o diretório do projeto:
+
+Bash
+cd pop-flavor-spark
+Instale as dependências:
+
+Bash
+npm install
+Inicie o servidor de desenvolvimento:
+
+Bash
 npm run dev
-```
+Abra o navegador e acesse http://localhost:5173.
+
+⚙️ Desenvolvido com Lovable
+Este projeto foi construído e mantido utilizando a plataforma Lovable.
